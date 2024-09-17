@@ -1,0 +1,59 @@
+body{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: "Georgia Serif";
+}
+
+span{
+    height: 20px;
+}
+
+.menu{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns:repeat(5,1fr) ;    
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.imagens{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns:repeat(7,1fr) ;    
+}
+.imagens img{
+    border-radius: 50%;
+    width: 50%;
+}
+
+.noticiastitulo{
+    margin-top: 10px;
+    background-color: #202020;
+}
+
+.noticias{
+    gap: 20px;
+    text-align: left;
+    margin-top: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+footer{
+    background-color: #202020;
+    margin: 20px;
+    font-weight: bold;
+}
+
+.noticias img{
+    width: 100%;
+}
+
+.menuimg{
+    margin-top: 20px;
+    size: 80%;    
+}

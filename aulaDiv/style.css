@@ -1,0 +1,119 @@
+div{
+    border: 1px solid;
+}
+
+h1{
+    text-align: center;
+    size: 20px;
+}
+
+span{
+    padding: 80px;
+}
+/*CONTAINER 1--------------------------------------------------------------------------------*/
+.container1{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px ,auto);
+}
+.con1_1{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    min-height: 200px;
+    background-color: greenyellow;
+}
+.con1_2{
+    background-color: olive;
+}
+.con1_3{
+    background-color: purple;
+}
+.con1_4{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    background-color: magenta;
+}
+.con1_5{
+    background-color: navy;
+}
+.con1_6{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    background-color: red;
+}
+/*CONTAINER 2--------------------------------------------------------------------------------*/
+.container2{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: minmax(100px,auto);
+    row-gap: 8px;
+}
+.con2_1{
+    background-color: greenyellow;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+.con2_2{
+    background-color: red;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.con2_3{
+    background-color: navy;
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+/*CONTAINER 3--------------------------------------------------------------------------------*/
+.container3{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: minmax(100px,auto);
+    gap: 10px;
+}
+.con3_1{
+    background-color: red;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.con3_2{
+    background-color: navy;
+}
+.con3_3{
+    background-color: magenta;
+}
+.con3_4{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    background-color: red;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-auto-rows: minmax(100px,auto);
+    column-gap: 2px;
+    min-height: 98px;
+    border: 5px red solid;
+}
+
+.con3_4 div{
+    background-color: purple;
+}
+
+.con3_5{
+    background-color: red;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.con3_6{
+    background-color: navy;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-start: 4;
+    grid-column-end: 4;
+}
+.con3_7{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    background-color: greenyellow;
+}
