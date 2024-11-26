@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #lightbulb {
+            border: 1px solid black;
+            width: 15%;
+        }
+
+        h2 {
+            font-weight: bold;
+        }
+
+
+        #container {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="lboff.png" alt="lightbulb" id="lightbulb">
+    <br><br><br>
+    <div id="container">
+        <span>CPF:
+            <input type="text" id="inputCPF">
+            <p id="cpfText">CPF</p>
+        </span>
+        <br>
+        <h2>Calculadora</h2>
+        <div>
+            <p id="resultado">0 ? 0 = </p>
+        </div>
+        <div>
+            Número 1: <input type="text" id="inputNum1">
+        </div>
+        <div>
+            Número 2: <input type="text" id="inputNum2">
+        </div>
+        <div>
+            <button id="soma">Soma</button>
+            <button id="sub">Subtração</button>
+            <button id="mult">Multiplicação</button>
+            <button id="divi">Divisão</button>
+        </div>
+    </div>
+    <script>
+
+        var lbState = 0;
+        var num1 = 0;
+        var num2 = 0;
+        var operacao = "?";
+
+        const inputCPF = document.getElementById('inputCPF');
+        const resultadoCPF = document.getElementById('cpfText');
+
+        inputCPF.addEventListener('input', function () {
+            resultadoCPF.textContent = inputCPF.value || 'CPF';
+        });
+
+        document.querySelector("#lightbulb").onclick =
+            function () {
+                if (lbState == 0) {
+                    document.querySelector("#lightbulb").src = "lbon.png";
+                    lbState = 1;
+                } else {
+                    document.querySelector("#lightbulb").src = "lboff.png";
+                    lbState = 0;
+                }
+            }
+
+
+
+        document.querySelector("#soma").onclick =
+            function () {
+                operacao = "+";
+                num1 = document.querySelector("#inputNum1").value;
+                num2 = document.querySelector("#inputNum2").value;
+                let resultadoCalculo = parseFloat(num1) + parseFloat(num2);
+                document.querySelector("#resultado").textContent = num1 + " " + operacao + " " + num2 + " = " + resultadoCalculo;
+            }
+
+        document.querySelector("#sub").onclick =
+            function () {
+                operacao = "-";
+                num1 = document.querySelector("#inputNum1").value;
+                num2 = document.querySelector("#inputNum2").value;
+                let resultadoCalculo = parseFloat(num1) - parseFloat(num2);
+                document.querySelector("#resultado").textContent = num1 + " " + operacao + " " + num2 + " = " + resultadoCalculo;
+            }
+
+        document.querySelector("#mult").onclick =
+            function () {
+                operacao = "*";
+                num1 = document.querySelector("#inputNum1").value;
+                num2 = document.querySelector("#inputNum2").value;
+                let resultadoCalculo = parseFloat(num1) * parseFloat(num2);
+                document.querySelector("#resultado").textContent = num1 + " " + operacao + " " + num2 + " = " + resultadoCalculo;
+            }
+
+        document.querySelector("#divi").onclick =
+            function () {
+                operacao = "/";
+                num1 = document.querySelector("#inputNum1").value;
+                num2 = document.querySelector("#inputNum2").value;
+                let resultadoCalculo = parseFloat(num1) / parseFloat(num2);
+                document.querySelector("#resultado").textContent = num1 + " " + operacao + " " + num2 + " = " + resultadoCalculo;
+            }
+    </script>
+</body>
+
+</html>
